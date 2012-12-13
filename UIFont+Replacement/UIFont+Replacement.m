@@ -76,10 +76,9 @@ static void initializeReplacementFonts()
 			return;
 		}
 	}
-	
-	[replacementDictionary release];
-	replacementDictionary = [aReplacementDictionary retain];
-	
+    
+    replacementDictionary = aReplacementDictionary;
+		
 	for (id key in [replacementDictionary allKeys])
 	{
 		NSString *fontName = [replacementDictionary objectForKey:key];
